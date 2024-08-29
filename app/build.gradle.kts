@@ -3,21 +3,24 @@ plugins {
 }
 
 android {
-    namespace = "com.example.sahasi"
+    namespace = "com.vishruth.sahasi"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.sahasi"
+        applicationId = "com.vishruth.sahasi"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
+            // Disable debugging for release builds
+            isDebuggable = false
+
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -32,7 +35,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
